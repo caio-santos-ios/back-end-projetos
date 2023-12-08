@@ -25,5 +25,5 @@ export class Project {
     repository: string;
 
     @Column({type: "json"})
-    tecnologies: Itecnology;
+    tecnologies: Itecnology[];
 }
