@@ -19,4 +19,7 @@ export class Project {
 
     @Column()
     repository: string;
+
+    @Column()
+    tecnolgies: any;
 }
