@@ -2,10 +2,12 @@ import axios from "axios"
 import "dotenv/config"
 import express, { json } from "express"
 import { dataBaseSourse, projectRepository } from "./db"
+import cors from "cors"
 
 const app = express()
 
 app.use(json())
+app.use(cors())
 
 app.post('/projetos', async (req, res) => {
     let arr;
