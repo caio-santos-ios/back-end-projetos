@@ -42,8 +42,5 @@ app.get('/projetos', async (req, res) => {
 })
 
 dataBaseSourse.initialize()
-.then(() => {
-    app.listen(8000, () => console.log("Serivdor rodando"))
-    console.log("Database connect")
-})
+.then(() => app.listen(8000))
 .catch((err) => console.log(err))
