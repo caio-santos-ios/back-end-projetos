@@ -1,5 +1,9 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
+interface Itecnology {
+    name: string;
+}
+
 @Entity('projects')
 export class Project {
     @PrimaryGeneratedColumn('increment')
@@ -20,6 +24,6 @@ export class Project {
     @Column()
     repository: string;
 
-    @Column()
-    tecnolgies: any;
+    @Column({type: "json"})
+    tecnologies: Itecnology;
 }
