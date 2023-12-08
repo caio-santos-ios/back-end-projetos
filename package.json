@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --rs --cls --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --rs --cls --ignore-watch node_modules src/app.ts",
     "typeorm": "typeorm-ts-node-commonjs",
     "build": "tsc",
     "start": "node dist/server.js"
