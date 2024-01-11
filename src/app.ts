@@ -10,10 +10,14 @@ app.use(json())
 app.use(cors())
 
 app.get('/projetos', async (req, res) => {
-    const projects = await projectRepository.find()
+    const projects = await projectRepository.find({
+        order: {
+            id: 'ASC'
+        }
+    })
     res.json(projects)
 })
 
 dataBaseSourse.initialize()
-.then(() => app.listen(8000))
+.then(() => app.listen(9000))
 .catch((err) => console.log(err))
