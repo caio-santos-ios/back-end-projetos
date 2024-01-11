@@ -12,7 +12,7 @@ app.use(cors())
 app.get('/projetos', async (req, res) => {
     const projects = await projectRepository.find({
         order: {
-            id: 'ASC'
+            id: 'DESC'
         }
     })
     res.json(projects)
